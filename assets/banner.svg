@@ -1,0 +1,266 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300">
+  <defs>
+    <!-- Deep dark background -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f0f1a;stop-opacity:1" />
+    </linearGradient>
+    <!-- Red/crimson accent -->
+    <linearGradient id="redAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ef4444;stop-opacity:1" />
+    </linearGradient>
+    <!-- Title gradient: red to orange -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f97316;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ef4444;stop-opacity:1" />
+    </linearGradient>
+    <!-- Green terminal glow -->
+    <filter id="greenGlow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Red glow -->
+    <filter id="redGlow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- Scanline pattern -->
+    <pattern id="scanlines" width="1200" height="4" patternUnits="userSpaceOnUse">
+      <rect width="1200" height="2" fill="#ffffff" opacity="0.015"/>
+    </pattern>
+    <!-- Key cap gradient -->
+    <linearGradient id="keyCap" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1e2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#12121f;stop-opacity:1" />
+    </linearGradient>
+    <!-- Highlighted key (pressed) -->
+    <linearGradient id="keyPressed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b0000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a0000;stop-opacity:1" />
+    </linearGradient>
+    <!-- Drop shadow filter -->
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="300" fill="url(#bgGrad)"/>
+  <!-- Scanlines overlay -->
+  <rect width="1200" height="300" fill="url(#scanlines)"/>
+
+  <!-- Left accent bar -->
+  <rect x="0" y="0" width="4" height="300" fill="url(#redAccent)"/>
+
+  <!-- ===== KEYBOARD VISUAL (right side) ===== -->
+  <!-- Keyboard base -->
+  <rect x="620" y="50" width="555" height="200" rx="10" fill="#111118" stroke="#1e1e2e" stroke-width="2"/>
+  <rect x="628" y="58" width="539" height="184" rx="8" fill="#0d0d15" stroke="#1a1a28" stroke-width="1"/>
+
+  <!-- ROW 1: number row (with some keys highlighted) -->
+  <!-- Helper macro: key at x,y width w -->
+  <!-- ESC -->
+  <rect x="638" y="68" width="30" height="26" rx="3" fill="url(#keyPressed)" stroke="#dc2626" stroke-width="1"/>
+  <text x="653" y="84" font-family="monospace" font-size="9" fill="#ef4444" text-anchor="middle" filter="url(#greenGlow)">ESC</text>
+
+  <!-- Number keys 1-9 with some red highlights -->
+  <rect x="674" y="68" width="26" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="687" y="84" font-family="monospace" font-size="10" fill="#6b7280" text-anchor="middle">1</text>
+
+  <rect x="706" y="68" width="26" height="26" rx="3" fill="url(#keyPressed)" stroke="#dc2626" stroke-width="1"/>
+  <text x="719" y="84" font-family="monospace" font-size="10" fill="#ef4444" text-anchor="middle" filter="url(#greenGlow)">2</text>
+
+  <rect x="738" y="68" width="26" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="751" y="84" font-family="monospace" font-size="10" fill="#6b7280" text-anchor="middle">3</text>
+
+  <rect x="770" y="68" width="26" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="783" y="84" font-family="monospace" font-size="10" fill="#6b7280" text-anchor="middle">4</text>
+
+  <rect x="802" y="68" width="26" height="26" rx="3" fill="url(#keyPressed)" stroke="#dc2626" stroke-width="1"/>
+  <text x="815" y="84" font-family="monospace" font-size="10" fill="#ef4444" text-anchor="middle" filter="url(#greenGlow)">5</text>
+
+  <rect x="834" y="68" width="26" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="847" y="84" font-family="monospace" font-size="10" fill="#6b7280" text-anchor="middle">6</text>
+
+  <rect x="866" y="68" width="26" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="879" y="84" font-family="monospace" font-size="10" fill="#6b7280" text-anchor="middle">7</text>
+
+  <rect x="898" y="68" width="26" height="26" rx="3" fill="url(#keyPressed)" stroke="#dc2626" stroke-width="1"/>
+  <text x="911" y="84" font-family="monospace" font-size="10" fill="#ef4444" text-anchor="middle" filter="url(#greenGlow)">8</text>
+
+  <rect x="930" y="68" width="26" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="943" y="84" font-family="monospace" font-size="10" fill="#6b7280" text-anchor="middle">9</text>
+
+  <rect x="962" y="68" width="26" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="975" y="84" font-family="monospace" font-size="10" fill="#6b7280" text-anchor="middle">0</text>
+
+  <rect x="994" y="68" width="42" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="1015" y="84" font-family="monospace" font-size="9" fill="#6b7280" text-anchor="middle">BKSP</text>
+
+  <!-- ROW 2: QWERTY -->
+  <rect x="638" y="100" width="38" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="657" y="116" font-family="monospace" font-size="9" fill="#6b7280" text-anchor="middle">TAB</text>
+
+  <rect x="682" y="100" width="26" height="26" rx="3" fill="url(#keyPressed)" stroke="#dc2626" stroke-width="1"/>
+  <text x="695" y="116" font-family="monospace" font-size="10" fill="#ef4444" text-anchor="middle" filter="url(#greenGlow)">Q</text>
+
+  <rect x="714" y="100" width="26" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="727" y="116" font-family="monospace" font-size="10" fill="#6b7280" text-anchor="middle">W</text>
+
+  <rect x="746" y="100" width="26" height="26" rx="3" fill="url(#keyPressed)" stroke="#dc2626" stroke-width="1"/>
+  <text x="759" y="116" font-family="monospace" font-size="10" fill="#ef4444" text-anchor="middle" filter="url(#greenGlow)">E</text>
+
+  <rect x="778" y="100" width="26" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="791" y="116" font-family="monospace" font-size="10" fill="#6b7280" text-anchor="middle">R</text>
+
+  <rect x="810" y="100" width="26" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="823" y="116" font-family="monospace" font-size="10" fill="#6b7280" text-anchor="middle">T</text>
+
+  <rect x="842" y="100" width="26" height="26" rx="3" fill="url(#keyPressed)" stroke="#dc2626" stroke-width="1"/>
+  <text x="855" y="116" font-family="monospace" font-size="10" fill="#ef4444" text-anchor="middle" filter="url(#greenGlow)">Y</text>
+
+  <rect x="874" y="100" width="26" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="887" y="116" font-family="monospace" font-size="10" fill="#6b7280" text-anchor="middle">U</text>
+
+  <rect x="906" y="100" width="26" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="919" y="116" font-family="monospace" font-size="10" fill="#6b7280" text-anchor="middle">I</text>
+
+  <rect x="938" y="100" width="26" height="26" rx="3" fill="url(#keyPressed)" stroke="#dc2626" stroke-width="1"/>
+  <text x="951" y="116" font-family="monospace" font-size="10" fill="#ef4444" text-anchor="middle" filter="url(#greenGlow)">O</text>
+
+  <rect x="970" y="100" width="26" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="983" y="116" font-family="monospace" font-size="10" fill="#6b7280" text-anchor="middle">P</text>
+
+  <rect x="1002" y="100" width="34" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="1019" y="116" font-family="monospace" font-size="9" fill="#6b7280" text-anchor="middle">ENT</text>
+
+  <!-- ROW 3: ASDF -->
+  <rect x="638" y="132" width="42" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="659" y="148" font-family="monospace" font-size="8" fill="#6b7280" text-anchor="middle">CAPS</text>
+
+  <rect x="686" y="132" width="26" height="26" rx="3" fill="url(#keyPressed)" stroke="#dc2626" stroke-width="1"/>
+  <text x="699" y="148" font-family="monospace" font-size="10" fill="#ef4444" text-anchor="middle" filter="url(#greenGlow)">A</text>
+
+  <rect x="718" y="132" width="26" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="731" y="148" font-family="monospace" font-size="10" fill="#6b7280" text-anchor="middle">S</text>
+
+  <rect x="750" y="132" width="26" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="763" y="148" font-family="monospace" font-size="10" fill="#6b7280" text-anchor="middle">D</text>
+
+  <rect x="782" y="132" width="26" height="26" rx="3" fill="url(#keyPressed)" stroke="#dc2626" stroke-width="1"/>
+  <text x="795" y="148" font-family="monospace" font-size="10" fill="#ef4444" text-anchor="middle" filter="url(#greenGlow)">F</text>
+
+  <rect x="814" y="132" width="26" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="827" y="148" font-family="monospace" font-size="10" fill="#6b7280" text-anchor="middle">G</text>
+
+  <rect x="846" y="132" width="26" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="859" y="148" font-family="monospace" font-size="10" fill="#6b7280" text-anchor="middle">H</text>
+
+  <rect x="878" y="132" width="26" height="26" rx="3" fill="url(#keyPressed)" stroke="#dc2626" stroke-width="1"/>
+  <text x="891" y="148" font-family="monospace" font-size="10" fill="#ef4444" text-anchor="middle" filter="url(#greenGlow)">J</text>
+
+  <rect x="910" y="132" width="26" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="923" y="148" font-family="monospace" font-size="10" fill="#6b7280" text-anchor="middle">K</text>
+
+  <rect x="942" y="132" width="26" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="955" y="148" font-family="monospace" font-size="10" fill="#6b7280" text-anchor="middle">L</text>
+
+  <rect x="974" y="132" width="62" height="26" rx="3" fill="url(#keyPressed)" stroke="#dc2626" stroke-width="1"/>
+  <text x="1005" y="148" font-family="monospace" font-size="8.5" fill="#ef4444" text-anchor="middle" filter="url(#greenGlow)">ENTER</text>
+
+  <!-- ROW 4: ZXCV -->
+  <rect x="638" y="164" width="54" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="665" y="180" font-family="monospace" font-size="8" fill="#6b7280" text-anchor="middle">SHIFT</text>
+
+  <rect x="698" y="164" width="26" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="711" y="180" font-family="monospace" font-size="10" fill="#6b7280" text-anchor="middle">Z</text>
+
+  <rect x="730" y="164" width="26" height="26" rx="3" fill="url(#keyPressed)" stroke="#dc2626" stroke-width="1"/>
+  <text x="743" y="180" font-family="monospace" font-size="10" fill="#ef4444" text-anchor="middle" filter="url(#greenGlow)">X</text>
+
+  <rect x="762" y="164" width="26" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="775" y="180" font-family="monospace" font-size="10" fill="#6b7280" text-anchor="middle">C</text>
+
+  <rect x="794" y="164" width="26" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="807" y="180" font-family="monospace" font-size="10" fill="#6b7280" text-anchor="middle">V</text>
+
+  <rect x="826" y="164" width="26" height="26" rx="3" fill="url(#keyPressed)" stroke="#dc2626" stroke-width="1"/>
+  <text x="839" y="180" font-family="monospace" font-size="10" fill="#ef4444" text-anchor="middle" filter="url(#greenGlow)">B</text>
+
+  <rect x="858" y="164" width="26" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="871" y="180" font-family="monospace" font-size="10" fill="#6b7280" text-anchor="middle">N</text>
+
+  <rect x="890" y="164" width="26" height="26" rx="3" fill="url(#keyPressed)" stroke="#dc2626" stroke-width="1"/>
+  <text x="903" y="180" font-family="monospace" font-size="10" fill="#ef4444" text-anchor="middle" filter="url(#greenGlow)">M</text>
+
+  <rect x="922" y="164" width="114" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="979" y="180" font-family="monospace" font-size="8" fill="#6b7280" text-anchor="middle">SHIFT</text>
+
+  <!-- ROW 5: Bottom row with spacebar -->
+  <rect x="638" y="196" width="38" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="657" y="212" font-family="monospace" font-size="8" fill="#6b7280" text-anchor="middle">CTRL</text>
+
+  <rect x="682" y="196" width="30" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="697" y="212" font-family="monospace" font-size="8" fill="#6b7280" text-anchor="middle">ALT</text>
+
+  <!-- Spacebar -->
+  <rect x="718" y="196" width="216" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+
+  <rect x="940" y="196" width="30" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="955" y="212" font-family="monospace" font-size="8" fill="#6b7280" text-anchor="middle">ALT</text>
+
+  <rect x="976" y="196" width="60" height="26" rx="3" fill="url(#keyCap)" stroke="#252535" stroke-width="1"/>
+  <text x="1006" y="212" font-family="monospace" font-size="8" fill="#6b7280" text-anchor="middle">CTRL</text>
+
+  <!-- Captured keystrokes display -->
+  <rect x="628" y="230" width="539" height="22" rx="4" fill="#050508" stroke="#1a1a28" stroke-width="1"/>
+  <text x="638" y="245" font-family="monospace" font-size="10" fill="#22c55e" filter="url(#greenGlow)">captured: </text>
+  <text x="710" y="245" font-family="monospace" font-size="10" fill="#ef4444" filter="url(#greenGlow)">Q E Y O A F J X B M ...</text>
+  <text x="1100" y="245" font-family="monospace" font-size="10" fill="#22c55e" filter="url(#greenGlow)">█</text>
+
+  <!-- ===== LEFT TEXT SECTION ===== -->
+  <!-- Main title -->
+  <text x="55" y="105" font-family="'Segoe UI', Arial, sans-serif" font-size="55" font-weight="800"
+        fill="url(#titleGrad)" filter="url(#shadow)" letter-spacing="1">keylogger</text>
+
+  <!-- Subtitle badge -->
+  <rect x="58" y="116" width="192" height="22" rx="4" fill="#1a0000" stroke="#7f1d1d" stroke-width="1"/>
+  <text x="154" y="131" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#f87171" text-anchor="middle">EDUCATIONAL USE ONLY</text>
+
+  <!-- Divider -->
+  <line x1="58" y1="150" x2="560" y2="150" stroke="#1e1e2e" stroke-width="1"/>
+
+  <!-- Description -->
+  <text x="58" y="172" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#9ca3af">
+    Tampermonkey-based browser keylogger
+  </text>
+  <text x="58" y="192" font-family="'Segoe UI', Arial, sans-serif" font-size="14" fill="#9ca3af">
+    proof-of-concept for security research
+  </text>
+
+  <!-- Feature pills -->
+  <rect x="58" y="208" width="128" height="26" rx="13" fill="#1a0000" stroke="#7f1d1d" stroke-width="1"/>
+  <text x="122" y="225" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#f87171" text-anchor="middle">Tampermonkey</text>
+
+  <rect x="196" y="208" width="106" height="26" rx="13" fill="#0c1a0c" stroke="#14532d" stroke-width="1"/>
+  <text x="249" y="225" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#4ade80" text-anchor="middle">JavaScript</text>
+
+  <rect x="312" y="208" width="110" height="26" rx="13" fill="#0d0d1a" stroke="#1e1b4b" stroke-width="1"/>
+  <text x="367" y="225" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#818cf8" text-anchor="middle">Obfuscatable</text>
+
+  <rect x="432" y="208" width="110" height="26" rx="13" fill="#1a0a00" stroke="#7c2d12" stroke-width="1"/>
+  <text x="487" y="225" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#fb923c" text-anchor="middle">PoC / Research</text>
+
+  <!-- Bottom note -->
+  <text x="58" y="268" font-family="'Segoe UI', Arial, sans-serif" font-size="12" fill="#374151">
+    Captures keystrokes · Click-triggered variant · Educational purposes
+  </text>
+</svg>

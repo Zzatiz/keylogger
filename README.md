@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.svg" alt="keylogger banner" width="100%"/>
+</p>
+
 <h1 align="center">Tampermonkey Keylogger</h1>
 
 <p align="center">Proof-Of-Concept for a keylogger.</p>
